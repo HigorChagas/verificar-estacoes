@@ -40,13 +40,13 @@ function verificarEstacoes() {
 
 function imagemInverno() {
     let img = document.createElement('img')
+    img.classList.add('fadeImg')
     img.src = 'img/inverno.jpg'
     document.body.appendChild(img)
 }
 
 function imagemPrimavera() {
     let img = document.createElement('img')
-    img.className('fade-in')
     img.src = 'img/primavera.jpg'
     document.body.appendChild(img)
 }
