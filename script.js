@@ -38,27 +38,24 @@ function verificarEstacoes() {
     resultado.innerHTML = `<p>No mês de <strong>${mes}</strong>, estamos na estação <strong>${estacao}</strong></p>`
 }
 
+let img = document.createElement('img')
+
 function imagemInverno() {
-    let img = document.createElement('img')
-    img.classList.add('fadeImg')
     img.src = 'img/inverno.jpg'
     document.body.appendChild(img)
 }
 
 function imagemPrimavera() {
-    let img = document.createElement('img')
     img.src = 'img/primavera.jpg'
     document.body.appendChild(img)
 }
 
 function imagemVerao() {
-    let img = document.createElement('img')
     img.src = 'img/verao.jpg'
     document.body.appendChild(img)
 }
 
 function imagemOutono() {
-    let img = document.createElement('img')
     img.src = 'img/outono.jpg'
     document.body.appendChild(img)
 }
