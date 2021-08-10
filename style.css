@@ -17,10 +17,10 @@
     color: white;
     font-size: 1rem;
     text-align: center;
-    transition: 1s;
     position: relative;
     z-index: 999;
     opacity: 0.94;
+    bottom: 50%;
 }
 
 img {
@@ -62,8 +62,8 @@ img {
   100% {opacity:1;}
 }
 
-button {
-    border: none;
+.btn {
+  border: none;
     padding: 15px 32px;
     background-color: #4CAF50;
     color: white;
@@ -75,9 +75,29 @@ button {
     transition: 1s;
 }
 
-button:hover {
+.btn:hover {
     background-color: #134715;
     transition: 1s;
+}
+
+.blue:hover {
+    background-color: #03045e;
+    transition: 1s;
+}
+
+.pink:hover {
+    background-color: #7b4b94;
+    transition: 1s;
+}
+
+.brown:hover {
+  background-color: #774936;
+  transition: 1s;
+}
+
+.red:hover {
+  background-color: #6a040f;
+  transition: 1s;
 }
 
 #resultado {

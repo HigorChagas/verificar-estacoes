@@ -1,8 +1,9 @@
+var botao = document.getElementById('btn-verificar')
 function verificarEstacoes() {
     let mes = prompt('Digite o mês em extenso (ex: Janeiro)')
     let estacao = ''
     let resultado = document.getElementById('resultado')
-    let botao = document.getElementById('btn-verificar')
+    
     
     let container = document.querySelector('.container')
     
@@ -29,6 +30,7 @@ function verificarEstacoes() {
             estacao = 'Outono'
             imagemOutono()
             container.style.backgroundColor = '#dc5318'
+            botao.style.backgroundColor = '#ae2012'
             break
         default:
             estacao = 'INDEFINIDA'
@@ -43,20 +45,24 @@ let img = document.createElement('img')
 function imagemInverno() {
     img.src = 'img/inverno.jpg'
     document.body.appendChild(img)
+    botao.classList.add('blue')
 }
 
 function imagemPrimavera() {
     img.src = 'img/primavera.jpg'
     document.body.appendChild(img)
+    botao.classList.add('pink')
 }
 
 function imagemVerao() {
     img.src = 'img/verao.jpg'
     document.body.appendChild(img)
+    botao.classList.add('brown')
 }
 
 function imagemOutono() {
     img.src = 'img/outono.jpg'
     document.body.appendChild(img)
+    botao.classList.add('red')
 }
 
