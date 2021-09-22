@@ -75,6 +75,21 @@ img {
     transition: 1s;
 }
 
+.btn-blue {
+  background-color: #3235c8;
+}
+
+.btn-pink {
+  background-color: #ffafcc;
+}
+
+.btn-brown {
+  background-color: #b08968;
+}
+
+.btn-red {
+  background-color: #ae2012;
+}
 .btn:hover {
     background-color: #134715;
     transition: 1s;
