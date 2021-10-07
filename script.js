@@ -4,7 +4,7 @@ function verificarEstacoes() {
     const mes = prompt('Digite o mês por extenso (ex: Janeiro)');
     const resultado = document.querySelector('#resultado');
     const img = document.createElement('img');
-    const addImg = document.body.appendChild(img);
+    document.body.appendChild(img);
     
     
     let estacao = '';
