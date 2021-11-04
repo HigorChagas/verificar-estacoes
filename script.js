@@ -3,53 +3,43 @@ function verificarEstacoes() {
     
     const mes = prompt('Digite o mês por extenso (ex: Janeiro)');
     const resultado = document.querySelector('#resultado');
+    const container = document.querySelector('.container');
+    const titulo = document.querySelector('#title');
     const img = document.createElement('img');
     document.body.appendChild(img);
     
-    
     let estacao = '';
-    
-    addBackground(mes);
-    
+      
     switch(mes.toLowerCase())  {
         case 'janeiro': case 'fevereiro': case 'março':
             estacao = 'Inverno';
             img.src = 'img/inverno.jpg';
+            container.style.backgroundColor = '#023e8a';
+            titulo.innerHTML = 'Inverno!';
             break;
         case 'abril': case 'maio': case 'junho':
             estacao = 'Primavera';
             img.src = 'img/primavera.jpg';
+            container.style.backgroundColor = '#e07be0';
+            titulo.innerHTML = 'Primavera!';
             break;
         case 'julho': case 'agosto': case 'setembro':
             estacao = 'Verão';
-            img.src = 'img/verao.jpg'
+            img.src = 'img/verao.jpg';
+            container.style.backgroundColor = '#dbb42c';
+            titulo.innerHTML = 'Verão!';
             break;
         case 'outubro': case 'novembro': case 'dezembro':
             estacao = 'Outono';
             img.src = 'img/outono.jpg'
+            container.style.backgroundColor = '#dc5318'
+            titulo.innerHTML = 'Outono';
             break;
         default:
             estacao = 'INDEFINIDA';
             alert('[ERROR] Mês inválido');
-            break;
+            resultado.innerHTML = 'Mês inválido'
+            return;
     }
     resultado.innerHTML = `<p>No mês de <strong>${mes}</strong>, estamos na estação <strong>${estacao}</strong></p>`;
-}
-
-function addBackground(mes) {
-    const container = document.querySelector('.container');
-
-    if(mes === 'janeiro' || mes === 'fevereiro' || mes === 'março') {
-        container.style.backgroundColor = '#023e8a';
-        botao.classList.add('blue', 'btn-blue');
-    } else if(mes === 'abril' || mes === 'maio' || mes === 'junho') {
-        container.style.backgroundColor = '#e07be0';
-        botao.classList.add('pink', 'btn-pink');
-    } else if(mes === 'julho' || mes === 'agosto' || mes === 'setembro') {
-        container.style.backgroundColor = '#dbb42c';
-        botao.classList.add('brown', 'btn-brown');
-    } else if(mes === 'outubro' || mes === 'novembro' || mes === 'dezembro') {
-        container.style.backgroundColor = '#dc5318';
-        botao.classList.add('red', 'btn-red');
-    }
 }
